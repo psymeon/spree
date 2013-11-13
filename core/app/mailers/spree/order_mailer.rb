@@ -5,7 +5,7 @@ module Spree
       subject = (resend ? "[#{Spree.t(:resend).upcase}] " : '')
       subject += "#{Spree::Config[:site_name]} #{Spree.t('order_mailer.confirm_email.subject')} ##{@order.number}"
       mail(to: @order.email, from: from_address, subject: subject) do |format|
-        format.html
+        format.html {render :layout => false}
       end
     end
 
