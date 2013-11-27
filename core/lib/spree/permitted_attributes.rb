@@ -31,7 +31,25 @@ module Spree
       :city, :country_id, :state_id, :zipcode, :phone,
       :state_name, :alternative_phone, :company]
 
-    @@checkout_attributes = [:email, :use_billing, :shipping_method_id, :coupon_code, :special_instructions, :ship_to_multiple, :multiple_addresses]
+    @@checkout_attributes = [
+                              :email, 
+                              :use_billing, 
+                              :shipping_method_id, 
+                              :coupon_code, 
+                              :special_instructions, 
+                              :ship_to_multiple, 
+                              :multiple_addresses,
+                              :mshipping_addresses_attributes => [
+                                :firstname,
+                                :lastname,
+                                :address1,
+                                :city,
+                                :country_id,
+                                :state_id,
+                                :zipcode,
+                                :_destroy
+                              ]
+                            ]
 
     @@image_attributes = [:alt, :attachment, :position, :viewable_type, :viewable_id]
 
