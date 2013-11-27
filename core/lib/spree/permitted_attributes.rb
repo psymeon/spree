@@ -40,6 +40,7 @@ module Spree
                               :ship_to_multiple, 
                               :multiple_addresses,
                               :mshipping_addresses_attributes => [
+                                :id,
                                 :firstname,
                                 :lastname,
                                 :address1,
