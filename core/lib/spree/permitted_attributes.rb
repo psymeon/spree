@@ -48,6 +48,8 @@ module Spree
                                 :country_id,
                                 :state_id,
                                 :zipcode,
+                                :line_item_quantity,
+                                :line_item_id,
                                 :_destroy
                               ]
                             ]
